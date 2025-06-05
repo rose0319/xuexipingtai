@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考公规划网站</title>
+    <style>
+        /* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Header navigation */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            transition: background-color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+
+        /* Main Section */
+        main {
+            padding: 40px 20px;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta a {
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #c0392b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        /* Scroll to top button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: none;
+            cursor: pointer;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#news">考公资讯</a></li>
+                <li><a href="#resources">学习资源</a></li>
+                <li><a href="#plan">备考规划</a></li>
+                <li><a href="#tests">模拟测试</a></li>
+                <li><a href="#community">用户社区</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- 首页 -->
+        <section id="home">
+            <h2>欢迎来到考公规划网站</h2>
+            <p>这是一个全方位的备考平台，帮助你系统地准备公务员考试。我们提供最新的考试资讯、详细的学习资源、备考计划和模拟测试等内容。</p>
+        </section>
+
+        <!-- 考公资讯 -->
+        <section id="news">
+            <h2>最新考公资讯</h2>
+            <p>关注各类公务员考试的公告、政策变化以及各地区的考试信息。确保你在备考过程中不会错过任何重要的消息。</p>
+            <ul>
+                <li><a href="#">2024年公务员考试报名时间发布</a></li>
+                <li><a href="#">最新公务员考试大纲解读</a></li>
+                <li><a href="#">各省市公务员招聘信息汇总</a></li>
+            </ul>
+        </section>
+
+        <!-- 学习资源 -->
+        <section id="resources">
+            <h2>学习资源</h2>
+            <p>提供丰富的学习资源，帮助你掌握考试科目的核心内容，提升你的答题技巧。</p>
+            <ul>
+                <li><a href="#">推荐考试教材和复习书籍</a></li>
+                <li><a href="#">历年真题及解析</a></li>
+                <li><a href="#">免费视频学习课程</a></li>
+                <li><a href="#">行测、申论题型详细分析</a></li>
+            </ul>
+        </section>
+
+        <!-- 备考规划 -->
+        <section id="plan">
+            <h2>备考规划</h2>
+            <p>为你量身定制科学合理的备考计划，帮助你从日常的学习安排到最后的冲刺阶段，确保每个环节都不掉链子。</p>
+            <ul>
+                <li><a href="#">如何制定合理的备考时间表</a></li>
+                <li><a href="#">考前冲刺技巧和策略</a></li>
+                <li><a href="#">如何提高申论写作能力</a></li>
+            </ul>
+        </section>
+
+        <!-- 模拟测试 -->
+        <section id="tests">
+            <h2>模拟测试</h2>
+            <p>通过模拟测试评估你的备考进展，发现弱点并及时调整学习策略。我们提供各种模拟试卷和模拟考试环境。</p>
+            <ul>
+                <li><a href="#">免费在线模拟考试</a></li>
+                <li><a href="#">模拟考试分析与反馈</a></li>
+            </ul>
+        </section>
+
+        <!-- 用户社区 -->
+        <section id="community">
+            <h2>用户社区</h2>
+            <p>加入我们的考生社区，与其他考生分享备考经验，讨论考试策略，共同进步。</p>
+            <ul>
+                <li><a href="#">考公经验分享</a></li>
+                <li><a href="#">考试疑问解答专区</a></li>
+                <li><a href="#">备考心得交流会</a></li>
+            </ul>
+        </section>
+
+        <div class="cta">
+            <a href="#resources">立即开始备考</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 考公规划网站. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">回到顶部</button>
+
+    <script>
+        // Scroll to top button visibility
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("scrollTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollTopBtn").style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Smooth scroll for internal links
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

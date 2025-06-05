@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能自适应学习平台用户登录</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container button:hover {
+            background-color: #2575fc;
+        }
+        .container .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        .register-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 登录界面 -->
+    <div class="container" id="login-container">
+        <h1>登录到智能自适应学习平台</h1>
+        <input type="text" id="login-username" placeholder="用户名" required>
+        <input type="password" id="login-password" placeholder="密码" required>
+        <button onclick="login()">登录</button>
+        <div class="error-message" id="login-error"></div>
+        <div class="footer">
+            <p>还没有账号? <a href="#" onclick="showRegister()">注册</a></p>
+        </div>
+    </div>
+
+    <!-- 注册界面 -->
+    <div class="container register-container" id="register-container">
+        <h1>注册</h1>
+        <input type="text" id="register-username" placeholder="用户名" required>
+        <input type="password" id="register-password" placeholder="密码" required>
+        <label for="register-role">身份</label>
+<select id="register-role">
+    <option value="student">学生</option>
+    <option value="teacher">教师</option>
+</select>
+
+        <button onclick="register()">注册</button>
+        <div class="error-message" id="register-error"></div>
+        <div class="footer">
+            <p>已有账号? <a href="#" onclick="showLogin()">返回登录</a></p>
+        </div>
+    </div>
+
+    <script src="scriptlogin.js"></script>
+
+</body>
+</html>

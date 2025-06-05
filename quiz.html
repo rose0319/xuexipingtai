@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职业规划测评</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #careerForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .question label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #result {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            #careerForm, #result {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>职业规划测评</h1>
+
+    <form id="careerForm">
+        <div id="questionsContainer">
+            <!-- 问题将通过 JavaScript 动态生成 -->
+        </div>
+
+            <!-- 引入测评问题的逻辑 -->
+            <script src="scriptq.js"></script>
+
+
+
+        <button type="submit">提交测评</button>
+    </form>
+
+    <div id="result">
+        <!-- 推荐的职业将在此显示 -->
+    </div>
+
+
+
+    <!-- 引入职业推荐的逻辑 -->
+    <script src="scripta.js"></script>
+
+</body>
+</html>
