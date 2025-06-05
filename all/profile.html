@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>个人中心</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #1f1f1f;
+      color: white;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #2a2a2a;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #b7e0ff;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar li {
+      padding: 10px 0;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    .sidebar li:hover {
+      color: white;
+    }
+    .main {
+      flex: 1;
+      background-color: #2d2d2d;
+      padding: 30px;
+      overflow: auto;
+    }
+    .main h1 {
+      margin-bottom: 20px;
+    }
+    .card {
+      background: #3a3a3a;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .card h3 {
+      color: #66ccff;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #ccc;
+    }
+    .card input, .card button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .card input {
+      border: 1px solid #999;
+    }
+    .card button {
+      background-color: #4b5ae0;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2 id="welcomeMessage">用户昵称</h2>
+    <ul>
+      <li onclick="showSection('overview')">我的资料</li>
+      <li onclick="showSection('records')">测试记录</li>
+      <li onclick="showSection('plan')">学习计划</li>
+      <li onclick="showSection('notes')">我的笔记</li>
+      <li onclick="showSection('feedback')">意见反馈</li>
+    </ul>
+  </div>
+
+  <div class="main" id="mainContent">
+    <div class="card" id="overview">
+      <h3>个人资料修改</h3>
+      <input type="text" id="nickname" placeholder="修改昵称">
+      <input type="password" id="new-password" placeholder="修改密码">
+      <button onclick="saveProfile()">保存修改</button>
+    </div>
+
+    <div class="card" id="records" style="display:none;">
+      <h3>推荐职业</h3>
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background: #4c6faf; color: white;">
+            <th style="padding: 10px; border: 1px solid #ddd;">职位名称</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">技能要求</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">职位描述</th>
+          </tr>
+        </thead>
+        <tbody id="careerContainer"></tbody>
+      </table>
+    </div>
+
+    <div class="card" id="plan" style="display:none;">
+      <h3>学习计划</h3>
+      <p>展示学习计划数据...</p>
+    </div>
+
+    <div class="card" id="records" style="display:none;">
+      <h3>测试记录</h3>
+      <p>展示测试成绩、正确率等...</p>
+    </div>
+
+    <div class="card" id="notes" style="display:none;">
+      <h3>我的笔记</h3>
+      <p>展示笔记内容...</p>
+    </div>
+
+    
+
+    <div class="card" id="feedback" style="display:none;">
+      <h3>意见反馈</h3>
+      <p>提交反馈建议...</p>
+    </div>
+  </div>
+
+  <script src="scriptprofile.js"></script>
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.card');
+      sections.forEach(s => s.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    const nickname = localStorage.getItem("username") || "访客";
+    document.getElementById("userNickname").innerText = nickname;
+  </script>
+</body>
+</html>

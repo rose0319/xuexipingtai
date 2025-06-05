@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>教师上传资源展示</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #3b6cb7, #1e3c72);
+      color: white;
+      font-family: "Helvetica Neue", sans-serif;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .resource-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .resource-box {
+      width: 360px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .resource-box iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .resource-info {
+      padding: 12px;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .resource-info p {
+      margin: 4px 0;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>教师上传资源展示</h1>
+
+  <div id="resourceContainer" class="resource-grid"></div>
+
+  <script src="teacherResources.js"></script>
+
+
+</body>
+</html>

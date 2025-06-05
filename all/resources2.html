@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>智能自适应学习平台相关资源</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f8f8f8, #2a5298);
+      color: white;
+      font-family: sans-serif;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #2a5298;
+    }
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .video-box {
+      width: 320px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .video-box iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+    .video-box p {
+      padding: 10px;
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+      background-color: rgba(0,0,0,0.2);
+    }
+    
+    .dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.dropdown-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-button:hover {
+  background-color: #ffffff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  border-radius: 6px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  </style>
+</head>
+<body>
+
+  <h1>相关资源</h1>
+  <div class="category-section" style="
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+">
+ <div class="dropdown">
+  <button class="dropdown-button" onclick="window.location.href='teacherResources.html'">
+    教师资源
+  </button>
+</div>
+
+    <div class="dropdown">
+      <button class="dropdown-button">信息安全 ▼</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="filterByCategory('渗透'); return false;">渗透</a>
+        <a href="#" onclick="filterByCategory('攻防'); return false;">攻防</a>
+        <a href="#" onclick="filterByCategory('Linux'); return false;">Linux</a>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <button class="dropdown-button">语言课程 ▼</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="filterByCategory('C语言'); return false;">C</a>
+        <a href="#" onclick="filterByCategory('C++'); return false;">C++</a>
+        <a href="#" onclick="filterByCategory('Java'); return false;">Java</a>
+        <a href="#" onclick="filterByCategory('Python'); return false;">Python</a>
+        <a href="#" onclick="filterByCategory('PHP'); return false;">PHP</a>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <button class="dropdown-button">人工智能 ▼</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="filterByCategory('人工智能'); return false;">人工智能</a>
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+  <div id="videoContainer" class="video-grid"></div>
+
+
+  <div style="text-align: center; margin-top: 20px; position: absolute; top: 20px; right: 30px;">
+    <input type="text" id="searchInput" placeholder="输入关键词搜索视频" style="padding: 8px; width: 200px;">
+    <button onclick="searchVideos()" style="padding: 8px 16px;">搜索</button>
+  </div>
+  
+
+  <button id="loadMoreBtn" onclick="loadNextPage()" style="display: block; margin: 20px auto; padding: 10px 20px;">
+    加载更多视频
+  </button>
+  
+
+  <script src="scriptresource.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子科技大学成都学院学生职业生涯规划与在线测试</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    body {
+        background: linear-gradient(to bottom right, #86C6F4, #FFC4C4), url("R.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Roboto', sans-serif;
+        position: relative;
+        margin: 0;
+        animation: fadeInPage 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInPage {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    header {
+        background-color: #28369f;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    header h1 {
+        font-size: 32px;
+        margin: 10px 0;
+    }
+
+    .top-categories {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .top-categories a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .top-categories a:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 100px;
+        width: 180px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin: 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+    }
+
+    .preview-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .button {
+        background: linear-gradient(45deg, #4CAF50, #87D37C);
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button:hover {
+        background: linear-gradient(45deg, #87D37C, #4CAF50);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+        background-color: rgba(11, 8, 65, 0.9);
+        text-align: center;
+        padding: 10px;
+        color: white;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .user-profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-link {
+    color: #fff; /* 白色字体 */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* 炫彩渐变背景 */
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-link:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* 反向渐变 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>智能自适应学习平台</h1>
+        <div class="user-profile" id="profileWrapper">
+    <a href="#" class="profile-link" id="profileLink">个人中心</a>
+    <div id="logoutTooltip" style="
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: white;
+        color: black;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 10;
+        cursor: pointer;
+    ">退出登录</div>
+</div>
+
+        <div class="top-categories">
+            <a href="https://www.cduestc.cn/newsinternet/init_1030100/list2xue2xiao4xin1wen21030108"><i class="fas fa-newspaper"></i> 校园新闻</a>
+            <a href="events2.html"><i class="fas fa-calendar-alt"></i> 重要活动</a>
+            <a href="https://www.16personalities.com/ch/%E4%BA%BA%E6%A0%BC%E6%B5%8B%E8%AF%95"><i class="fas fa-clipboard-check"></i> MBTI人格测试</a>
+            <a href="resources2.html"><i class="fas fa-folder-open"></i> 相关资源</a>
+            <a href="#" id="profileLink"><i class="fas fa-folder-open"></i> 个人中心</a>
+            <a href="about1.html"><i class="fas fa-info-circle"></i> 关于我们</a>
+        </div>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="quiz.html"><i class="fas fa-chart-line"></i> 职业规划测试</a></li>
+                <li><a href="Public examination planning.html"><i class="fas fa-graduation-cap"></i> 考公规划</a></li>
+                <li><a href="examPlan.html"><i class="fas fa-book"></i> 考研规划</a></li>
+                <li><a href="developmentPlan.html"><i class="fas fa-chalkboard-teacher"></i> 就业指导</a></li>
+                <li><a href="jobPostings.html"><i class="fas fa-briefcase"></i> 实习推荐</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="C:\Users\15532\Desktop\pbl\all\cduestc.png" alt="页面预览图" class="preview-image">
+        <h2 style="text-align: center; color: white;">电子科技大学成都学院</h2>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1Gt411w7GT&t=17.2" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1Rk4y1r7Ev&t=1.2" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1zvcHepEX3&t=1.2" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV15e4y1h7dW&t=1.2" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1UDSiYEExR&t=1.2" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1jf421i7rb&t=1.2" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+        </div>        
+    
+    <footer>
+        <p>智能自适应学习平台 &copy; 2024</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function goToProfile() {
+        window.location.href = "profile.html"; // 跳转到个人中心
+    }
+
+   document.addEventListener("DOMContentLoaded", () => {
+  const link = document.getElementById("profileLink");
+  const tooltip = document.getElementById("logoutTooltip");
+  const wrapper = document.getElementById("profileWrapper");
+
+  let hideTimer;
+  const username = localStorage.getItem("username");
+  const role = localStorage.getItem("role");
+
+  if (!username) {
+    link.textContent = "请登录";
+  }
+
+  // 角色点击跳转
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (!username) {
+      window.location.href = "Login.html";
+      return;
+    }
+
+    if (role === "teacher") {
+      window.location.href = "upload.html";
+    } else {
+      window.location.href = "profile.html";
+    }
+  });
+
+  // 鼠标移入 wrapper 或 tooltip 都不隐藏
+  wrapper.addEventListener("mouseenter", () => {
+    clearTimeout(hideTimer);
+    if (username) tooltip.style.display = "block";
+  });
+
+  wrapper.addEventListener("mouseleave", () => {
+    hideTimer = setTimeout(() => {
+      tooltip.style.display = "none";
+    }, 300); // ⏱ 延迟隐藏，用户有时间移动到 tooltip
+  });
+
+  // 点击退出
+  tooltip.addEventListener("click", () => {
+    localStorage.removeItem("username");
+    localStorage.removeItem("role");
+    alert("您已退出登录！");
+    window.location.href = "Login.html";
+  });
+});
+
+
+
+  //教师学生role不同跳转个人中心
+document.addEventListener("DOMContentLoaded", () => {
+  const link = document.getElementById("profileLink");
+
+  if (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // 阻止默认跳转
+
+      const role = localStorage.getItem("role");
+      const username = localStorage.getItem("username");
+
+      if (!username) {
+        alert("请先登录！");
+        return;
+      }
+
+      if (role === "teacher") {
+        window.location.href = "upload.html";
+      } else {
+        window.location.href = "profile.html";
+      }
+    });
+  }
+});
+
+
+</script>
+
